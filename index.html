@@ -60,18 +60,83 @@ description: Self-contained Systems (SCS) is a software architecture focused on 
 	</div>
 </div>
 
-<h1 class="hero-heading text-centered">Slide Deck</h1>
-<div class="container-with-centered-buttons">
-	<a class="button w-button" href="https://speakerdeck.com/rstrangh/self-contained-systems-1">Get it on SpeakerDeck</a>
-	<a class="button w-button" href="https://res.cloudinary.com/innoq/image/upload/v1661258993/scs-architecture.org/scs-infodeck-english_adsqcx.pdf">PDF</a>
-	<a class="button w-button" href="slidedeck/en/scs-infodeck-english.key">Keynote</a>
-	<a class="button w-button" href="slidedeck/en/scs-infodeck-english.pptx">PowerPoint</a>
-</div>
-<div class="container-with-slides">
-	<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/e74a068d06a949cdb358a55ca17d2dc5" title="Self-Contained Systems" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;" data-ratio="1.78343949044586"></iframe>
+<h1 class="hero-heading text-centered">The Idea</h1>
+<div class="container-with-the-idea">
+	<div class="idea">
+		<img src="img/monolith.png" alt="monolith"/>
+		<p class="text-center idea-text">A monolith contains <b>numerous</b> things inside of a single system …</p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">Various Domains</p>
+		<img src="img/monolith-with-domains.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/monolith-with-layers.png" alt="monolith"/>
+		<p class="text-center idea-text">
+			<span style="color:#9191a5;">User Interface</span>
+			<span style="color:#99e8d6">Business Logic</span>
+			<span style="color:#fe9dae">Persistence</span>
+		</p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">… as well as a <b>lot</b> of modules, components, frameworks and libraries.</p>
+		<img src="img/monolith-with-components.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/monolith-with-layers-domains-components.png" alt="monolith"/>
+		<p class="text-center idea-text">With all these layers in one place, a monolith tends to <b>grow</b>.</p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text" style="max-width:50%">With all these layers in one place, a monolith tends to <b>grow</b>.</p>
+		<img src="img/monolith-with-layers-domains-components-growing.png" style="width:45%" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/scs-multiple-slices.png" alt="monolith"/>
+		<p class="text-center idea-text">If you cut a monolithic system along its very domains …</p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">… and wrap every domain in a <b>separate</b>, <b>replaceable</b> web application …</p>
+		<img src="img/scs-selected-slice.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/scs-single-slice.png" alt="monolith"/>
+		<p class="text-center idea-text">… then that application can be referred to as a <b>self-contained system</b> (SCS).</p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">On its outside, an SCS is a decentralized unit that is communicating with other systems via <b>RESTful HTTP or lightweight messaging.</b></p>
+		<img src="img/scs-single-slice-in-out.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/scs-on-platform.png" alt="monolith"/>
+		<p class="text-center idea-text">Therefore self-contained systems can be individually developed for <b>different platforms.</b></p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">
+			<span>An SCS contains its own </span>
+			<span style="color:#9191a5;">user interface</span>
+				<span>, specific </span>
+				<span style="color:#99e8d6">business logic</span>
+			  <span> and separate </span>
+			  <span style="color:#fe9dae">data storage</span>
+			  <span>.</span>
+		</p>
+		<img src="img/scs-own-ui-bl-db.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/scs-roca.png" alt="monolith"/>
+		<p class="text-center idea-text">The user interface consists of web technologies that are composed according to	<b>ROCA principles.</b></p>
+	</div>
+	<div class="idea">
+		<p class="text-center idea-text">Besides a web interface a self-contained system can provide an <b>optional API</b>.</p>
+		<img src="img/scs-optional-api.png" alt="monolith"/>
+	</div>
+	<div class="idea">
+		<img src="img/scs-autonomous-bl.png" alt="monolith"/>
+		<p class="text-center idea-text">The business logic part <b>only</b> solves problems that arise in its core domain. This logic is only shared with other systems over a <b>well defined interface.</b></p>
+	</div>
 </div>
 
-<p class="text-centered">
+<p class="text-center">
 	You would like to use this content?<br/>
 	Sure, SCS is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">creative commons attribution-sharealike 3.0 unported license</a>.
 </p>
@@ -81,5 +146,5 @@ description: Self-contained Systems (SCS) is a software architecture focused on 
 </p>
 <p class="text-centered">
 	You would like to contribute?<br/>
-	Go to <a href=""https://github.com/innoq/SCS"">Github</a>.
+	Go to <a href="https://github.com/innoq/SCS">Github</a>.
 </p>
